@@ -1,4 +1,4 @@
-//start
+
 $(function (event) {
   console.log('DOM is ready');
 
@@ -7,12 +7,12 @@ $(function (event) {
 //start of the game
 $(function playGame() {
 
-
+//variables for the game
 var player1 = player1();
 var player2 = player2();
 var win = winner();
 
-
+});
 
 //displays x
 $(function player1(player1) {
@@ -25,20 +25,43 @@ $(function player1(player1) {
 $(function player2() {
  $('td:odd').click(function(){
    // console.log("I've been clicked");
-   $(this).html('o')
+   $(this).html('o');
  })
 });
 
+
+$('#reset').click(function(){
+
+//});
 
 
 //players turn
 
 
+// //var box = $(this);
+//     if(td.hasClass('x') || box.hasClass('o')){
+//       alert('This has been selected');
+//     } else {
+//       if(player === 1){
+//         td.addClass('x');
+//           if (winner('x')){
+//             alert("Congrats" + player1 + "wins")
+//           }else {
+//             player = 2;
+//           }
+//         }
+//           else {
+//             if(player2 === 2){
+//               td.addClass('o');
+//                 if (winner('0')){
+//                   alert("Congrats" + player2 + "wins")
+//
+//          }
 
-player1();
+
 playgame();
 
-});
+
 });
 // var array = [[0,1,2],[3,4,5],[6,7,8],[0,4,8],[0,3,6],[6,4,2],[1,4,7],[2,5,8]];
 // if (array === true) {
@@ -67,19 +90,3 @@ playgame();
 //
 //
 // winCase();
-
-
-//create player 1 and player 2
-//reset button not working.
-
- // $("#reset").css("background-color", "red");
-
- // $('#reset').click(function(){
-  //            $('td')[0].reset();
-  // });
-
-// $("td").append("<td>X</td>");
-
-// $('button').one('click', function() {
-//   $('#td').append($("<td>X</td>");
-// });
