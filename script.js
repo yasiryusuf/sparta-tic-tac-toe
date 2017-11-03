@@ -29,14 +29,41 @@ $(function player2() {
  })
 });
 
-
+//reset button
 $('#reset').click(function(){
 
-//});
+});
 
 
-//players turn
 
+function winner(symbol) {
+  //array that holds information about the winning boxes
+  var array = [[0,1,2],[3,4,5],[6,7,8],[0,4,8],[0,3,6],[6,4,2],[1,4,7],[2,5,8]];
+
+  if($('#0').hasClass(symbol) && $('#1').hasClass(symbol) && $('#2').hasClass(symbol))
+  {
+    return true;
+  }
+  else if ($('#3').hasClass(symbol) && $('#4').hasClass(symbol) && $('#5').hasClass(symbol)){
+    return true;
+  }
+  else if ($('#6').hasClass(symbol) && $('#7').hasClass(symbol) && $('#8').hasClass(symbol))
+  {
+    return true;
+  }
+  else if ($('#0').hasClass(symbol) && $('#3').hasClass(symbol) && $('#6').hasClass(symbol))
+  {
+    return true;
+  }
+  else if ($('#1').hasClass(symbol) && $('#4').hasClass(symbol) && $('#7').hasClass(symbol)){
+    return true;
+  }
+  else if ($('#2').hasClass(symbol) && $('#5').hasClass(symbol) && $('#8').hasClass(symbol))
+  {
+    return true;
+  }
+  else false;
+}
 
 // //var box = $(this);
 //     if(td.hasClass('x') || box.hasClass('o')){
@@ -63,7 +90,6 @@ playgame();
 
 
 });
-// var array = [[0,1,2],[3,4,5],[6,7,8],[0,4,8],[0,3,6],[6,4,2],[1,4,7],[2,5,8]];
 // if (array === true) {
 // $.each(array, function() {
 //   console.log("win");
